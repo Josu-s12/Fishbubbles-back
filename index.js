@@ -28,7 +28,7 @@ app.use(cors(corsOptions));
 app.use("/api/v1/user",userRoute);
 app.use("/api/v1/tweet", tweetRoute);
  
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT,() => {
     console.log(`Server listen at port ${PORT}`);
 })
